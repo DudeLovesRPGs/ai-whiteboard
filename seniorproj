@@ -130,9 +130,10 @@ while True:
     previousTime = currentTime
     cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_COMPLEX, 3, (0, 0, 255), 3)
     flipped = cv2.flip(img,1)
+    flip = cv2.flip(board,1)
     # Show contents of frame
-    cv2.imshow("Frame", img)
-    cv2.imshow('board', board)
+    cv2.imshow("Frame", flipped)
+    cv2.imshow('board', flip)
     cv2.waitKey(1)
 
 
